@@ -1,0 +1,6 @@
+id,department_id,full_name,position,workplace_id,phone,email,hire_date
+test_new_004,dept1,Новый Сотрудник 5,Разработчик,work1,+79120000001,new1@test.com,2024-12-01
+test_new_005,de55,Новый Сотрудник 6,Аналитик,work2,+79120000002,new2@test.com,2024-12-02
+test_new_006,dept1,Новый Сотрудник 7,Дизайнер,wo53,+79120000003,new3@test.com,2024-12-03
+test_new_004,dept1,Новый Сотрудник 5,Разработчик,work1,+79120000001,netest.com,2024-12-01
+test_new_004,dept1,Новый Сотрудник 5,Разработчик,work1,+79120000001,new1@test.com,2027-12-01

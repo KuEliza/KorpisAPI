@@ -1,0 +1,157 @@
+2025-12-03 00:00:36,180 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-03 00:00:36,182 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp6nm_gqf3.csv для модели employees
+2025-12-03 00:00:36,209 - barista_api - INFO - Успешно извлечено 3 строк
+2025-12-03 00:00:36,212 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-03 00:00:36,446 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-03 00:01:19,371 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-03 00:01:19,372 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp6h7mforb.csv для модели employees
+2025-12-03 00:01:19,386 - barista_api - INFO - Успешно извлечено 3 строк
+2025-12-03 00:01:19,387 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-03 00:01:20,165 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:08:41,354 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-04 15:08:41,355 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpzmsnqhng.csv для модели employees
+2025-12-04 15:08:41,388 - barista_api - INFO - Успешно извлечено 9 строк
+2025-12-04 15:08:41,390 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-04 15:08:41,476 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:10:10,787 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-04 15:10:10,788 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp0ukvi5m2.csv для модели employees
+2025-12-04 15:10:10,806 - barista_api - INFO - Успешно извлечено 9 строк
+2025-12-04 15:10:10,806 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-04 15:10:10,810 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:15:43,907 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-04 15:15:43,907 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmphnyg0s7a.csv для модели employees
+2025-12-04 15:15:43,920 - barista_api - ERROR - Ошибка извлечения: Error tokenizing data. C error: Expected 6 fields in line 8, saw 8
+
+2025-12-04 15:16:22,736 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-04 15:16:22,736 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpt01m3gy3.csv для модели employees
+2025-12-04 15:16:22,746 - barista_api - INFO - Успешно извлечено 6 строк
+2025-12-04 15:16:22,747 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-04 15:16:22,756 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:17:25,004 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-04 15:17:25,004 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpc4c_z6yn.csv для модели employees
+2025-12-04 15:17:25,018 - barista_api - INFO - Успешно извлечено 6 строк
+2025-12-04 15:17:25,019 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-04 15:17:25,023 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:30:52,725 - barista_api - INFO - Запуск ETL процесса для модели departments
+2025-12-04 15:30:52,726 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpdmu8euar.csv для модели departments
+2025-12-04 15:30:52,743 - barista_api - INFO - Успешно извлечено 4 строк
+2025-12-04 15:30:52,744 - barista_api - INFO - Начало валидации данных для модели departments
+2025-12-04 15:30:52,745 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:31:15,788 - barista_api - INFO - Запуск ETL процесса для модели departments
+2025-12-04 15:31:15,789 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp7jpupxz6.csv для модели departments
+2025-12-04 15:31:15,803 - barista_api - INFO - Успешно извлечено 4 строк
+2025-12-04 15:31:15,804 - barista_api - INFO - Начало валидации данных для модели departments
+2025-12-04 15:31:15,804 - barista_api - INFO - Начало трансформации данных для модели departments
+2025-12-04 15:31:15,814 - barista_api - INFO - Трансформация завершена
+2025-12-04 15:31:15,814 - barista_api - INFO - Начало загрузки данных для модели departments
+2025-12-04 15:31:15,827 - barista_api - INFO - Загрузка завершена. Добавлено: 1, Пропущено: 3
+2025-12-04 15:35:25,868 - barista_api - INFO - Запуск ETL процесса для модели departments
+2025-12-04 15:35:25,868 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpkcdp6dl0.csv для модели departments
+2025-12-04 15:35:25,878 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 15:35:25,879 - barista_api - INFO - Начало валидации данных для модели departments
+2025-12-04 15:35:25,880 - barista_api - INFO - Начало трансформации данных для модели departments
+2025-12-04 15:35:25,884 - barista_api - INFO - Трансформация завершена
+2025-12-04 15:35:25,884 - barista_api - INFO - Начало загрузки данных для модели departments
+2025-12-04 15:35:25,903 - barista_api - ERROR - Ошибка загрузки: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Конфликт инструкции INSERT с ограничением FOREIGN KEY "fk_departments_manager". Конфликт произошел в базе данных "CoffeeBusiness", таблица "dbo.employees", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Выполнение данной инструкции было прервано. (3621)')
+[SQL: INSERT INTO departments (id, name, manager_id) VALUES (?, ?, ?)]
+[parameters: ('dept31', 'Бухгалтеddрия', 'emp44441')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-12-04 15:35:37,252 - barista_api - INFO - Запуск ETL процесса для модели departments
+2025-12-04 15:35:37,253 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp1ujmw_8q.csv для модели departments
+2025-12-04 15:35:37,255 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 15:35:37,255 - barista_api - INFO - Начало валидации данных для модели departments
+2025-12-04 15:35:37,256 - barista_api - INFO - Начало трансформации данных для модели departments
+2025-12-04 15:35:37,261 - barista_api - INFO - Трансформация завершена
+2025-12-04 15:35:37,261 - barista_api - INFO - Начало загрузки данных для модели departments
+2025-12-04 15:35:37,267 - barista_api - ERROR - Ошибка загрузки: (pyodbc.IntegrityError) ('23000', '[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Конфликт инструкции INSERT с ограничением FOREIGN KEY "fk_departments_manager". Конфликт произошел в базе данных "CoffeeBusiness", таблица "dbo.employees", column \'id\'. (547) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Выполнение данной инструкции было прервано. (3621)')
+[SQL: INSERT INTO departments (id, name, manager_id) VALUES (?, ?, ?)]
+[parameters: ('dept31', 'Бухгалтеddрия', 'emp44441')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-12-04 15:36:08,774 - barista_api - INFO - Запуск ETL процесса для модели departments
+2025-12-04 15:36:08,774 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpkmgkowmx.csv для модели departments
+2025-12-04 15:36:08,788 - barista_api - INFO - Успешно извлечено 6 строк
+2025-12-04 15:36:08,788 - barista_api - INFO - Начало валидации данных для модели departments
+2025-12-04 15:36:08,789 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:36:39,352 - barista_api - INFO - Запуск ETL процесса для модели departments
+2025-12-04 15:36:39,353 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpqmd478nt.csv для модели departments
+2025-12-04 15:36:39,364 - barista_api - INFO - Успешно извлечено 7 строк
+2025-12-04 15:36:39,364 - barista_api - INFO - Начало валидации данных для модели departments
+2025-12-04 15:36:39,364 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:49:32,995 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-04 15:49:32,996 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpx52n0c9q.csv для модели employees
+2025-12-04 15:49:33,012 - barista_api - INFO - Успешно извлечено 4 строк
+2025-12-04 15:49:33,012 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-04 15:49:33,129 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:53:51,406 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-04 15:53:51,407 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpeqwd9m9c.csv для модели employees
+2025-12-04 15:53:51,422 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 15:53:51,422 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-04 15:53:51,430 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 15:59:10,616 - barista_api - INFO - Запуск ETL процесса для модели employees
+2025-12-04 15:59:10,617 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpqnxucv5n.csv для модели employees
+2025-12-04 15:59:10,632 - barista_api - INFO - Успешно извлечено 3 строк
+2025-12-04 15:59:10,632 - barista_api - INFO - Начало валидации данных для модели employees
+2025-12-04 15:59:10,640 - barista_api - INFO - Начало трансформации данных для модели employees
+2025-12-04 15:59:10,653 - barista_api - INFO - Трансформация завершена
+2025-12-04 15:59:10,653 - barista_api - INFO - Начало загрузки данных для модели employees
+2025-12-04 15:59:10,669 - barista_api - INFO - Загрузка завершена. Добавлено: 3, Пропущено: 0
+2025-12-04 16:06:35,087 - barista_api - INFO - Запуск ETL процесса для модели clients
+2025-12-04 16:06:35,087 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpb2q60spr.csv для модели clients
+2025-12-04 16:06:35,099 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 16:06:35,099 - barista_api - INFO - Начало валидации данных для модели clients
+2025-12-04 16:06:35,228 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 16:07:41,659 - barista_api - INFO - Запуск ETL процесса для модели projects
+2025-12-04 16:07:41,659 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpo0lnjwes.csv для модели projects
+2025-12-04 16:07:41,675 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 16:07:41,676 - barista_api - INFO - Начало валидации данных для модели projects
+2025-12-04 16:07:41,682 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 16:11:48,821 - barista_api - INFO - Запуск ETL процесса для модели clients
+2025-12-04 16:11:48,821 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpnm58x8kh.csv для модели clients
+2025-12-04 16:11:48,833 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 16:11:48,833 - barista_api - INFO - Начало валидации данных для модели clients
+2025-12-04 16:11:48,837 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 16:12:12,484 - barista_api - INFO - Запуск ETL процесса для модели projects
+2025-12-04 16:12:12,484 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpcutpri8o.csv для модели projects
+2025-12-04 16:12:12,498 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 16:12:12,499 - barista_api - INFO - Начало валидации данных для модели projects
+2025-12-04 16:12:12,501 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 16:13:00,870 - barista_api - INFO - Запуск ETL процесса для модели clients
+2025-12-04 16:13:00,870 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp7y4mm0pa.csv для модели clients
+2025-12-04 16:13:00,885 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 16:13:00,886 - barista_api - INFO - Начало валидации данных для модели clients
+2025-12-04 16:13:00,890 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 16:14:13,178 - barista_api - INFO - Запуск ETL процесса для модели projects
+2025-12-04 16:14:13,178 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp0mwu6izs.csv для модели projects
+2025-12-04 16:14:13,195 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 16:14:13,196 - barista_api - INFO - Начало валидации данных для модели projects
+2025-12-04 16:14:13,198 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 16:14:47,260 - barista_api - INFO - Запуск ETL процесса для модели clients
+2025-12-04 16:14:47,260 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp9zqem2g9.csv для модели clients
+2025-12-04 16:14:47,274 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 16:14:47,275 - barista_api - INFO - Начало валидации данных для модели clients
+2025-12-04 16:14:47,284 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 16:15:24,163 - barista_api - INFO - Запуск ETL процесса для модели projects
+2025-12-04 16:15:24,163 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmp9zggebfx.csv для модели projects
+2025-12-04 16:15:24,175 - barista_api - ERROR - Ошибка извлечения: Error tokenizing data. C error: Expected 5 fields in line 4, saw 7
+
+2025-12-04 16:17:25,011 - barista_api - INFO - Запуск ETL процесса для модели clients
+2025-12-04 16:17:25,012 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpklanqu4h.csv для модели clients
+2025-12-04 16:17:25,030 - barista_api - INFO - Успешно извлечено 5 строк
+2025-12-04 16:17:25,033 - barista_api - INFO - Начало валидации данных для модели clients
+2025-12-04 16:17:25,061 - barista_api - WARNING - Пропущены этапы трансформации и загрузки из-за ошибок валидации
+2025-12-04 16:18:44,498 - barista_api - INFO - Запуск ETL процесса для модели projects
+2025-12-04 16:18:44,498 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpkzz6t1_w.csv для модели projects
+2025-12-04 16:18:44,513 - barista_api - INFO - Успешно извлечено 3 строк
+2025-12-04 16:18:44,513 - barista_api - INFO - Начало валидации данных для модели projects
+2025-12-04 16:18:44,526 - barista_api - INFO - Начало трансформации данных для модели projects
+2025-12-04 16:18:44,542 - barista_api - INFO - Трансформация завершена
+2025-12-04 16:18:44,542 - barista_api - INFO - Начало загрузки данных для модели projects
+2025-12-04 16:18:44,566 - barista_api - INFO - Загрузка завершена. Добавлено: 3, Пропущено: 0
+2025-12-04 16:19:19,274 - barista_api - INFO - Запуск ETL процесса для модели clients
+2025-12-04 16:19:19,274 - barista_api - INFO - Начало извлечения данных из C:\Users\6EC4~1\AppData\Local\Temp\tmpf5fsybhg.csv для модели clients
+2025-12-04 16:19:19,291 - barista_api - INFO - Успешно извлечено 3 строк
+2025-12-04 16:19:19,292 - barista_api - INFO - Начало валидации данных для модели clients
+2025-12-04 16:19:19,303 - barista_api - INFO - Начало трансформации данных для модели clients
+2025-12-04 16:19:19,313 - barista_api - INFO - Трансформация завершена
+2025-12-04 16:19:19,313 - barista_api - INFO - Начало загрузки данных для модели clients
+2025-12-04 16:19:19,331 - barista_api - INFO - Загрузка завершена. Добавлено: 3, Пропущено: 0
