@@ -1,6 +1,6 @@
-id,department_id,full_name,position,workplace_id,phone,email,hire_date
-test_new_004,dept1,Новый Сотрудник 5,Разработчик,work1,+79120000001,new1@test.com,2024-12-01
-test_new_005,de55,Новый Сотрудник 6,Аналитик,work2,+79120000002,new2@test.com,2024-12-02
-test_new_006,dept1,Новый Сотрудник 7,Дизайнер,wo53,+79120000003,new3@test.com,2024-12-03
-test_new_004,dept1,Новый Сотрудник 5,Разработчик,work1,+79120000001,netest.com,2024-12-01
-test_new_004,dept1,Новый Сотрудник 5,Разработчик,work1,+79120000001,new1@test.com,2027-12-01
+id,department_id,full_name,position,workplace_id,hire_date,phone,email
+emp100,dept1,Козлова Анна Валерьевна,Бариста,work1,2024-01-15,+79990009999,new@coffee.com
+emp101,dept999,Сотрудник с ошибкой,Бариста,work1,2024-01-15,+79990008888,error@coffee.com
+emp102,dept1,Сотрудник с ошибкой2,Бариста,work999,2024-01-15,+79990007777,error2@coffee.com
+emp103,dept1,Сотрудник с ошибкой3,Бариста,work1,invalid-date,+79990006666,error3@coffee.com
+emp104,dept1,Сотрудник с ошибкой4,Бариста,work1,2024-01-15,+79990005555,invalid-email
