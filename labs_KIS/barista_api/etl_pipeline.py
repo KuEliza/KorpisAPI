@@ -11,36 +11,22 @@ logger = logging.getLogger("barista_api")
 
 class ETLPipeline:
     def __init__(self, file_path: str, db: Session, model_type: str = "employees"):
-
         self.file_path = file_path
         self.db = db
         self.model_type = model_type
         self.data = None
+
+        # Только модель сотрудников
         self.model_mapping = {
             'employees': models.Employee,
-            'clients': models.Client,
-            'projects': models.Project,
-            'departments': models.Department,
-            'workplaces': models.Workplace,
-            'purchases': models.Purchase,
-            'service_requests': models.ServiceRequest,
-            'business_processes': models.BusinessProcess
         }
 
-        # Определение обязательных полей для каждой модели
+        # Только обязательные поля для сотрудников
         self.required_fields = {
             'employees': ['id', 'department_id', 'full_name', 'position', 'workplace_id', 'hire_date'],
-            'clients': ['id', 'favorite_coffee_type_id', 'full_name'],
-            'projects': ['id', 'name', 'start_date'],
-            'departments': ['id', 'name'],
-            'workplaces': ['id', 'location', 'equipment_status_id'],
-            'purchases': ['id', 'employee_id', 'date', 'supplier', 'amount', 'coffee_product_type_id'],
-            'service_requests': ['id', 'employee_id', 'request_date', 'description', 'workplace_id', 'status_id'],
-            'business_processes': ['id', 'responsible_employee_id', 'name', 'project_id']
         }
 
     def extract(self) -> pd.DataFrame:
-        #Извлечение данных из файла
         logger.info(f"Начало извлечения данных из {self.file_path} для модели {self.model_type}")
         try:
             if self.file_path.endswith(('.xls', '.xlsx')):
@@ -51,10 +37,7 @@ class ETLPipeline:
                 raise ValueError("Неподдерживаемый формат файла")
 
             logger.info(f"Успешно извлечено {len(self.data)} строк")
-
-            # Приводим названия столбцов к нижнему регистру для удобства
             self.data.columns = self.data.columns.str.lower().str.strip()
-
             return self.data
         except Exception as e:
             logger.error(f"Ошибка извлечения: {e}")
@@ -81,7 +64,7 @@ class ETLPipeline:
         if errors['missing_columns']:
             return errors
 
-        # Проверка пропущенных значений в обязательных полях
+        # Проверка пропущенных значений
         for field in required:
             missing_count = self.data[field].isna().sum()
             if missing_count > 0:
@@ -119,29 +102,21 @@ class ETLPipeline:
         return errors
 
     def _validate_foreign_keys(self, errors: Dict[str, List[str]]):
+        # Только для сотрудников
         if self.model_type == 'employees':
             # Проверка department_id
             if 'department_id' in self.data.columns:
                 valid_departments = {str(dept[0]) for dept in self.db.query(models.Department.id).all()}
                 invalid_dept = self.data[~self.data['department_id'].isin(valid_departments)]['department_id'].unique()
                 if len(invalid_dept) > 0:
-                    errors['foreign_key_errors'].append(f"Несуществующие department_id: {invalid_dept}")
+                    errors['foreign_key_errors'].append(f"Несуществующие department_id: {list(invalid_dept)}")
 
             # Проверка workplace_id
             if 'workplace_id' in self.data.columns:
                 valid_workplaces = {str(wp[0]) for wp in self.db.query(models.Workplace.id).all()}
                 invalid_wp = self.data[~self.data['workplace_id'].isin(valid_workplaces)]['workplace_id'].unique()
                 if len(invalid_wp) > 0:
-                    errors['foreign_key_errors'].append(f"Несуществующие workplace_id: {invalid_wp}")
-
-        elif self.model_type == 'clients':
-            # Проверка favorite_coffee_type_id
-            if 'favorite_coffee_type_id' in self.data.columns:
-                valid_coffee_types = {str(ct[0]) for ct in self.db.query(models.CoffeeProductType.id).all()}
-                invalid_ct = self.data[~self.data['favorite_coffee_type_id'].isin(valid_coffee_types)][
-                    'favorite_coffee_type_id'].unique()
-                if len(invalid_ct) > 0:
-                    errors['foreign_key_errors'].append(f"Несуществующие favorite_coffee_type_id: {invalid_ct}")
+                    errors['foreign_key_errors'].append(f"Несуществующие workplace_id: {list(invalid_wp)}")
 
     def transform(self) -> pd.DataFrame:
         logger.info(f"Начало трансформации данных для модели {self.model_type}")
@@ -157,10 +132,6 @@ class ETLPipeline:
         date_columns = [col for col in self.data.columns if 'date' in col]
         for col in date_columns:
             self.data[col] = pd.to_datetime(self.data[col], errors='coerce').dt.date
-
-        # Обработка числовых полей
-        if 'amount' in self.data.columns and self.model_type == 'purchases':
-            self.data['amount'] = pd.to_numeric(self.data['amount'], errors='coerce')
 
         # Приведение ID к строковому типу
         if 'id' in self.data.columns:
@@ -179,16 +150,41 @@ class ETLPipeline:
         added_count = 0
         skipped_count = 0
 
+        # Подготовка данных для проверки внешних ключей
+        valid_departments = {str(dept[0]) for dept in self.db.query(models.Department.id).all()}
+        valid_workplaces = {str(wp[0]) for wp in self.db.query(models.Workplace.id).all()}
+
         try:
             for _, row in self.data.iterrows():
                 try:
-                    # Проверяем, существует ли уже запись с таким ID
+                    # Проверяем существование записи с таким ID
                     existing = self.db.query(model_class).filter_by(id=str(row['id'])).first()
-
                     if existing:
-                        # Если запись существует, пропускаем или обновляем
                         skipped_count += 1
                         continue
+
+                    # Проверка внешних ключей
+                    department_id = str(row.get('department_id', ''))
+                    workplace_id = str(row.get('workplace_id', ''))
+
+                    if department_id not in valid_departments:
+                        logger.warning(f"Пропуск строки {row['id']}: несуществующий department_id {department_id}")
+                        skipped_count += 1
+                        continue
+
+                    if workplace_id not in valid_workplaces:
+                        logger.warning(f"Пропуск строки {row['id']}: несуществующий workplace_id {workplace_id}")
+                        skipped_count += 1
+                        continue
+
+                    # Проверка email
+                    if 'email' in row and pd.notna(row['email']):
+                        email = str(row['email'])
+                        email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+                        if not re.match(email_pattern, email):
+                            logger.warning(f"Пропуск строки {row['id']}: некорректный email {email}")
+                            skipped_count += 1
+                            continue
 
                     # Подготовка данных для модели
                     model_data = {}
@@ -203,11 +199,11 @@ class ETLPipeline:
 
                 except Exception as e:
                     logger.warning(f"Ошибка при обработке строки {row.get('id', 'unknown')}: {e}")
+                    skipped_count += 1
                     continue
 
             self.db.commit()
             logger.info(f"Загрузка завершена. Добавлено: {added_count}, Пропущено: {skipped_count}")
-
             return added_count
 
         except Exception as e:
@@ -218,22 +214,20 @@ class ETLPipeline:
     def run(self):
         logger.info(f"Запуск ETL процесса для модели {self.model_type}")
 
-        #Извлечение
+        # Извлечение
         self.extract()
 
-        #Валидация
+        # Валидация
         validation_errors = self.validate()
 
-        #Трансформация (если нет критических ошибок)
-        if not any(len(errors) > 0 for errors in validation_errors.values()
-                   if isinstance(errors, list) and errors and
-                      not isinstance(errors[0], str) or 'missing_columns' not in str(errors)):
-            self.transform()
+        # Только критические ошибки блокируют загрузку
+        critical_errors = bool(validation_errors['missing_columns'] or validation_errors['duplicate_ids'])
 
-            # Этап 4: Загрузка
+        if not critical_errors:
+            self.transform()
             added_count = self.load()
         else:
             added_count = 0
-            logger.warning("Пропущены этапы трансформации и загрузки из-за ошибок валидации")
+            logger.warning("Пропущены этапы трансформации и загрузки из-за критических ошибок валидации")
 
         return validation_errors, added_count
